@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+section nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: #b906a482;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+section nav ul {
+  list-style: none;
+  margin-left: 4%;
+  padding: 10px;
+}
+
+section nav ul li {
+  display: inline-grid;
+  margin: 0 25px;
+}
+
+section nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.1s;
+}
+
+section nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: hsl(325, 90%, 23%);
+  display: block;
+  transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after {
+  width: 100%;
+}
+
+section nav ul li a:hover {
+  color: hsl(325, 90%, 23%);
+}
+
+section .main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 130px;
+}
+
+section .main .men_text h1 {
+  font-size: 90px;
+  position: relative;
+  font-family: "Times New Roman", Times, serif;
+  top: -100px;
+  left: 20px;
+}
+
+section .main .men_text h1 span {
+  margin-left: 15px;
+  color: hsl(325, 90%, 23%);
+  font-family: "Times New Roman", Times, serif;
+  line-height: 22px;
+  font-size: 170px;
+}
+
+section .main .main_image img {
+  width: 525px;
+  position: relative;
+  left: 100px;
+}
+
+/*About*/
+
+.about {
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0;
+}
+
+.about .about_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .about_main .image img {
+  width: 500px;
+  height: 600px;
+  position: relative;
+  top: 60px;
+}
+
+.about .about_main .about_text h1 span {
+  color: hsl(325, 90%, 23%);
+  margin-right: 15px;
+  font-family: mv boli;
+}
+
+.about .about_main .about_text h1 {
+  font-size: 55px;
+  position: relative;
+  bottom: 50px;
+}
+
+.about .about_main .about_text h3 {
+  font-size: 30px;
+  margin: 0 0 50px 0;
+}
+
+.about .about_main .about_text p {
+  width: 650px;
+  text-align: justify;
+  margin-right: 30px;
+  line-height: 22px;
+}
+
+.about .about_btn {
+  background: hsl(325, 90%, 23%);
+  padding: 12px 25px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  left: 55%;
+  bottom: 30px;
+}
+
+/*Login and Register*/
+@font-face {
+  font-family: "Gotham";
+  src: url("Gotham.woff2");
+}
+
+.btn {
+  position: absolute;
+  margin-left: 68px;
+  margin-top: -49px;
+  width: 250px;
+  height: 75px;
+  color: rgb(0, 0, 0);
+  font-family: "Gotham";
+  background-color: transparent;
+  text-transform: uppercase;
+  border-color: rgb(72, 67, 67);
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.btn-r {
+  margin-left: 68px;
+  margin-top: 10px;
+  width: 250px;
+  height: 75px;
+  color: rgb(0, 0, 0);
+  font-family: "Gotham";
+  background-color: transparent;
+  text-transform: uppercase;
+  border-color: rgb(72, 67, 67);
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.btn:hover,
+.btn-r:hover {
+  background-color: rgb(199, 158, 212);
+  color: rgb(255, 0, 187);
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+h4 {
+  margin-left: 180px;
+  font-size: 24px;
+}
+
+/*Menu*/
+
+.menu {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.menu h1 {
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu h1 span {
+  color: hsl(325, 90%, 23%);
+  margin-left: 15px;
+  font-family: mv boli;
+}
+
+.menu h1 span::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: hsl(325, 90%, 23%);
+  display: block;
+  position: relative;
+  bottom: 15px;
+}
+
+.menu .menu_box {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.menu .menu_box .menu_card {
+  width: 325px;
+  height: 380px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu_box .menu_card .menu_image {
+  width: 300px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+  transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card {
+  width: 45px;
+  height: 45px;
+  float: right;
+  position: relative;
+  top: -240px;
+  right: -8px;
+  opacity: 0;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card {
+  position: relative;
+  top: -240px;
+  right: 20px;
+  opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  color: #000;
+  cursor: pointer;
+  text-shadow: 0 0 6px #000;
+  transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover {
+  color: hsl(325, 90%, 23%);
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+  width: 60%;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  font-size: 25px;
+  color: hsl(325, 90%, 23%);
+}
+
+.menu .menu_box .menu_card .menu_info p {
+  text-align: center;
+  margin-top: 8px;
+  line-height: 21px;
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info {
+  color: hsl(325, 90%, 23%);
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background: #000000;
+  padding: 8px 10px;
+  margin: 0 80px;
+  transition: 0.3s;
+}
+
+.menu .menu_card .menu_info .menu_btn:hover {
+  color: rgb(255, 0, 247);
+}
+
+/*Footer*/
+
+footer {
+  width: 100%;
+  padding: 30px 0 0 20px;
+  background: #eeeeee;
+}
+
+footer .footer_main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag {
+  text-align: center;
+}
+
+footer .footer_main .footer_tag h2 {
+  color: #000;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+footer .footer_main .footer_tag p {
+  margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover {
+  color: hsl(325, 90%, 23%);
+}
+
+footer .end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+footer .end span {
+  color: hsl(325, 90%, 23%);
+  margin-left: 10px;
+}
